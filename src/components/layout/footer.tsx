@@ -49,7 +49,9 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" aria-hidden="true" />
-                contato@arclima.com.br
+                <a href="mailto:julineialvespaes2017@gmail.com" className="hover:text-foreground transition-colors">
+                  julineialvespaes2017@gmail.com
+                </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
