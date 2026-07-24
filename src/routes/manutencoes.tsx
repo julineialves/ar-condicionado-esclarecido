@@ -51,7 +51,7 @@ const maintenanceTasks = [
     title: "Inspeção do gás refrigerante",
     frequency: "Quando necessário",
     description:
-      "Se o aparelho não esfria como antes, pode estar com baixa carga de gás. Nunca complete o gás sem vazamento: o correto é encontrar e corrigir o vazamento primeiro.",
+      "Se o aparelho não esfria como antes, pode estar com baixa carga de gás. Não se completa gás se o gás vazou: é porque tem vazamento. O correto é encontrar e corrigir o vazamento primeiro.",
   },
   {
     icon: Calendar,

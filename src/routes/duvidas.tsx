@@ -69,6 +69,11 @@ const faqItems = [
     answer:
       "O split é mais silencioso, econômico e discreto, com a unidade externa separada. O de janela é mais barato, mas costuma ser mais barulhento e menos eficiente.",
   },
+  {
+    question: "Os BTUs precisam seguir a metragem do ambiente?",
+    answer:
+      "Sim. Os BTUs devem seguir a regra dos metros quadrados para gerar economia. Um aparelho pequeno demais para o espaço força o compressor e gasta mais energia; um aparelho adequado atinge a temperatura ideal com menos consumo.",
+  },
 ];
 
 function DuvidasPage() {
