@@ -79,7 +79,7 @@ const installationSteps = [
     icon: Droplets,
     title: "Drenagem e tubulação",
     description:
-      "A tubulação de cobre deve seguir o padrão do fabricante da máquina. A drenagem deve ter declive correto para evitar goteiras e entupimentos.",
+      "A drenagem deve ter declive correto para evitar goteiras e entupimentos. A tubulação de cobre deve ser instalada conforme as especificações técnicas.",
   },
   {
     icon: Wrench,
@@ -93,7 +93,7 @@ const locationTips = [
   "Evite instalar o evaporador em frente a camas ou sofás — o ar direto pode causar desconforto.",
   "Deixe espaço livre ao redor das unidades para facilitar a manutenção.",
   "O condensador precisa de ventilação livre e sombra para trabalhar melhor.",
-  "A tubulação deve ser a mais curta possível para preservar a eficiência.",
+  "A tubulação de cobre deve seguir o padrão do fabricante da máquina.",
 ];
 
 function InstalacoesPage() {
