@@ -79,7 +79,7 @@ const installationSteps = [
     icon: Droplets,
     title: "Drenagem e tubulação",
     description:
-      "A tubulação de cobre e a drenagem devem ter declive correto para evitar goteiras e entupimentos. O condensador fica do lado de fora.",
+      "A tubulação de cobre deve seguir o padrão do fabricante da máquina. Caso haja necessidade de aumentar o comprimento ou o diâmetro, verifique com o técnico que realizará a instalação. A drenagem deve ter declive correto para evitar goteiras e entupimentos.",
   },
   {
     icon: Wrench,
