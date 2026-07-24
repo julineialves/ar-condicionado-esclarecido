@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ManutencoesRouteImport } from './routes/manutencoes'
+import { Route as InstalacoesRouteImport } from './routes/instalacoes'
 import { Route as DuvidasRouteImport } from './routes/duvidas'
 import { Route as CuriosidadesRouteImport } from './routes/curiosidades'
 import { Route as ContatoRouteImport } from './routes/contato'
@@ -19,6 +20,11 @@ import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
 const ManutencoesRoute = ManutencoesRouteImport.update({
   id: '/manutencoes',
   path: '/manutencoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstalacoesRoute = InstalacoesRouteImport.update({
+  id: '/instalacoes',
+  path: '/instalacoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DuvidasRoute = DuvidasRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/curiosidades': typeof CuriosidadesRoute
   '/duvidas': typeof DuvidasRoute
+  '/instalacoes': typeof InstalacoesRoute
   '/manutencoes': typeof ManutencoesRoute
   '/sitemap/xml': typeof SitemapXmlRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/curiosidades': typeof CuriosidadesRoute
   '/duvidas': typeof DuvidasRoute
+  '/instalacoes': typeof InstalacoesRoute
   '/manutencoes': typeof ManutencoesRoute
   '/sitemap/xml': typeof SitemapXmlRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/curiosidades': typeof CuriosidadesRoute
   '/duvidas': typeof DuvidasRoute
+  '/instalacoes': typeof InstalacoesRoute
   '/manutencoes': typeof ManutencoesRoute
   '/sitemap/xml': typeof SitemapXmlRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/curiosidades'
     | '/duvidas'
+    | '/instalacoes'
     | '/manutencoes'
     | '/sitemap/xml'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/curiosidades'
     | '/duvidas'
+    | '/instalacoes'
     | '/manutencoes'
     | '/sitemap/xml'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/curiosidades'
     | '/duvidas'
+    | '/instalacoes'
     | '/manutencoes'
     | '/sitemap/xml'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   CuriosidadesRoute: typeof CuriosidadesRoute
   DuvidasRoute: typeof DuvidasRoute
+  InstalacoesRoute: typeof InstalacoesRoute
   ManutencoesRoute: typeof ManutencoesRoute
   SitemapXmlRoute: typeof SitemapXmlRoute
 }
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/manutencoes'
       fullPath: '/manutencoes'
       preLoaderRoute: typeof ManutencoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instalacoes': {
+      id: '/instalacoes'
+      path: '/instalacoes'
+      fullPath: '/instalacoes'
+      preLoaderRoute: typeof InstalacoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/duvidas': {
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   CuriosidadesRoute: CuriosidadesRoute,
   DuvidasRoute: DuvidasRoute,
+  InstalacoesRoute: InstalacoesRoute,
   ManutencoesRoute: ManutencoesRoute,
   SitemapXmlRoute: SitemapXmlRoute,
 }

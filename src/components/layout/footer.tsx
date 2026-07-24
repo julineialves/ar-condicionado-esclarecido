@@ -4,6 +4,7 @@ import { Wind, Mail, Phone, MapPin } from "lucide-react";
 const footerLinks = [
   { to: "/duvidas", label: "Dúvidas" },
   { to: "/curiosidades", label: "Curiosidades" },
+  { to: "/instalacoes", label: "Instalações" },
   { to: "/manutencoes", label: "Manutenções" },
   { to: "/contato", label: "Contato" },
 ];
