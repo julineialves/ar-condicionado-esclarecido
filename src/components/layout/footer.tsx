@@ -44,24 +44,24 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
-              Contato
+            <h3 className="text-base font-semibold text-foreground">
+              Outras formas de falar conosco
             </h3>
             <ul className="mt-4 space-y-3">
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 text-primary" aria-hidden="true" />
+              <li className="flex items-center gap-3 text-sm text-muted-foreground">
+                <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
                 <a href="mailto:julineialvespaes2017@gmail.com" className="hover:text-foreground transition-colors">
                   julineialvespaes2017@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
+              <li className="flex items-center gap-3 text-sm text-muted-foreground">
+                <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
                 <a href="https://wa.me/5547997840536" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   (47) 99784-0536
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                <MapPin className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
                 Cascavel, PR — 85806-230
               </li>
             </ul>
