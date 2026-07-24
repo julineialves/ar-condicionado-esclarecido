@@ -55,7 +55,9 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
-                (11) 99999-9999
+                <a href="tel:+5547997840536" className="hover:text-foreground transition-colors">
+                  (47) 99784-0536
+                </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
