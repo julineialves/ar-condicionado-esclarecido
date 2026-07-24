@@ -55,13 +55,13 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
-                <a href="tel:+5547997840536" className="hover:text-foreground transition-colors">
+                <a href="https://wa.me/5547997840536" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   (47) 99784-0536
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                São Paulo, SP — atendimento online
+                Cascavel, PR — 85806-230
               </li>
             </ul>
           </div>
