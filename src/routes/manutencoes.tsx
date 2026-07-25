@@ -89,7 +89,7 @@ function ManutencoesPage() {
         <div className="rounded-2xl border border-border/50 bg-card p-4 shadow-sm sm:p-6">
           <img
             src={componentesImg}
-            alt="Vista explodida de um ar-condicionado split de parede com identificação dos componentes internos: tampa superior, filtros de ar, evaporador, turbina ventiladora, bandeja de drenagem, aletas direcionadoras, painel frontal, carcaça traseira, tubos de cobre, isolamento térmico, motor do ventilador, placa eletrônica, sensor de temperatura, saída e entrada de ar, e suportes de fixação."
+            alt="Vista explodida de um ar-condicionado split de parede com identificação dos componentes internos: tampa superior, filtros de ar, evaporador, turbina ventiladora, bandeja de drenagem, aletas direcionadoras, painel frontal, carcaça traseira, tubos de cobre, isolamento térmico, motor do ventilador, placa eletrônica, sensor de temperatura, saída de ar e suportes de fixação, com destaque para o fluxo de entrada e saída de ar."
             className="w-full rounded-lg"
             loading="lazy"
           />
