@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Calendar, Droplets, Filter, Fan, ThermometerSun, AlertTriangle } from "lucide-react";
+import componentesImg from "@/assets/ar-condicionado-componentes.png";
 
 export const Route = createFileRoute("/manutencoes")({
   head: () => ({
@@ -84,7 +85,21 @@ function ManutencoesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-border/50 bg-card p-4 shadow-sm sm:p-6">
+          <img
+            src={componentesImg}
+            alt="Vista explodida de um ar-condicionado split de parede com identificação dos componentes internos: tampa superior, filtros de ar, evaporador, turbina ventiladora, bandeja de drenagem, aletas direcionadoras, painel frontal, carcaça traseira, tubos de cobre, isolamento térmico, motor do ventilador, placa eletrônica, sensor de temperatura, saída e entrada de ar, e suportes de fixação."
+            className="w-full rounded-lg"
+            loading="lazy"
+          />
+          <p className="mt-4 text-center text-sm text-muted-foreground">
+            Conhecer os componentes internos ajuda a entender por que cada manutenção é importante.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {maintenanceTasks.map((task) => (
             <Card key={task.title} className="transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-breeze-200/20">

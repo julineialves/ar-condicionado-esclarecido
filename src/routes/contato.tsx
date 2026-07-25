@@ -105,15 +105,24 @@ function ContatoPage() {
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3 text-foreground">
                   <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
-                  <span>contato@arclima.com.br</span>
+                  <a href="mailto:julineialvespaes2017@gmail.com" className="hover:text-primary transition-colors">
+                    julineialvespaes2017@gmail.com
+                  </a>
                 </div>
                 <div className="flex items-center gap-3 text-foreground">
                   <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
-                  <span>(11) 99999-9999</span>
+                  <a
+                    href="https://wa.me/5547997840536"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    (47) 99784-0536
+                  </a>
                 </div>
                 <div className="flex items-start gap-3 text-foreground">
                   <MapPin className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                  <span>São Paulo, SP — atendimento online</span>
+                  <span>Cascavel, PR — 85806-230</span>
                 </div>
               </CardContent>
             </Card>

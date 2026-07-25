@@ -9,32 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ManutencoesRouteImport } from './routes/manutencoes'
-import { Route as InstalacoesRouteImport } from './routes/instalacoes'
-import { Route as DuvidasRouteImport } from './routes/duvidas'
-import { Route as CuriosidadesRouteImport } from './routes/curiosidades'
-import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as CuriosidadesRouteImport } from './routes/curiosidades'
+import { Route as DuvidasRouteImport } from './routes/duvidas'
+import { Route as InstalacoesRouteImport } from './routes/instalacoes'
+import { Route as ManutencoesRouteImport } from './routes/manutencoes'
 import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
 
-const ManutencoesRoute = ManutencoesRouteImport.update({
-  id: '/manutencoes',
-  path: '/manutencoes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InstalacoesRoute = InstalacoesRouteImport.update({
-  id: '/instalacoes',
-  path: '/instalacoes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DuvidasRoute = DuvidasRouteImport.update({
-  id: '/duvidas',
-  path: '/duvidas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CuriosidadesRoute = CuriosidadesRouteImport.update({
-  id: '/curiosidades',
-  path: '/curiosidades',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -42,9 +27,24 @@ const ContatoRoute = ContatoRouteImport.update({
   path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CuriosidadesRoute = CuriosidadesRouteImport.update({
+  id: '/curiosidades',
+  path: '/curiosidades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DuvidasRoute = DuvidasRouteImport.update({
+  id: '/duvidas',
+  path: '/duvidas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstalacoesRoute = InstalacoesRouteImport.update({
+  id: '/instalacoes',
+  path: '/instalacoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManutencoesRoute = ManutencoesRouteImport.update({
+  id: '/manutencoes',
+  path: '/manutencoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapXmlRoute = SitemapXmlRouteImport.update({
@@ -123,32 +123,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/manutencoes': {
-      id: '/manutencoes'
-      path: '/manutencoes'
-      fullPath: '/manutencoes'
-      preLoaderRoute: typeof ManutencoesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/instalacoes': {
-      id: '/instalacoes'
-      path: '/instalacoes'
-      fullPath: '/instalacoes'
-      preLoaderRoute: typeof InstalacoesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/duvidas': {
-      id: '/duvidas'
-      path: '/duvidas'
-      fullPath: '/duvidas'
-      preLoaderRoute: typeof DuvidasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/curiosidades': {
-      id: '/curiosidades'
-      path: '/curiosidades'
-      fullPath: '/curiosidades'
-      preLoaderRoute: typeof CuriosidadesRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -158,11 +137,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/curiosidades': {
+      id: '/curiosidades'
+      path: '/curiosidades'
+      fullPath: '/curiosidades'
+      preLoaderRoute: typeof CuriosidadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/duvidas': {
+      id: '/duvidas'
+      path: '/duvidas'
+      fullPath: '/duvidas'
+      preLoaderRoute: typeof DuvidasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instalacoes': {
+      id: '/instalacoes'
+      path: '/instalacoes'
+      fullPath: '/instalacoes'
+      preLoaderRoute: typeof InstalacoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manutencoes': {
+      id: '/manutencoes'
+      path: '/manutencoes'
+      fullPath: '/manutencoes'
+      preLoaderRoute: typeof ManutencoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap/xml': {
@@ -187,3 +187,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
